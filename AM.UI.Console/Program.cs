@@ -5,6 +5,8 @@
 //Console.WriteLine(age);
 
 using AM.ApplicationCore.Domain;
+using AM.ApplicationCore.Interfaces;
+using AM.ApplicationCore.Services;
 
 //Personne p = new Personne();
 
@@ -35,45 +37,53 @@ using AM.ApplicationCore.Domain;
 
 
 
-Plane plane = new Plane();
-plane.PlaneId = 1;
-plane.Capacity = 150;
-plane.ManufacturedDate = DateTime.Now;
-plane.Plane_Type = Plane.PlaneType.Boing;
-plane.flights = null;
+//Plane plane = new Plane();
+//plane.PlaneId = 1;
+//plane.Capacity = 150;
+//plane.ManufacturedDate = DateTime.Now;
+//plane.Plane_Type = Plane.PlaneType.Boing;
+//plane.flights = null;
 
-//Plane plane2 = new Plane(Plane.PlaneType.Airbus, 100, DateTime.Now);
+////Plane plane2 = new Plane(Plane.PlaneType.Airbus, 100, DateTime.Now);
 
-Plane plane3 = new Plane()
-{
-    PlaneId = 1,
-    Capacity = 100,
-    ManufacturedDate = DateTime.Now,
-    Plane_Type = Plane.PlaneType.Boing,
-    flights = null
-};  
+//Plane plane3 = new Plane()
+//{
+//    PlaneId = 1,
+//    Capacity = 100,
+//    ManufacturedDate = DateTime.Now,
+//    Plane_Type = Plane.PlaneType.Boing,
+//    flights = null
+//};  
 
-Staff staff = new Staff();
-staff.EmploymentDate = DateTime.Now;
-staff.Function = "test";
-staff.Salary = 1000;
-staff.FirstName = "test";
-staff.EmailAdresse = "test@Test.com";
-staff.LastName = "test";
+//Staff staff = new Staff();
+//staff.EmploymentDate = DateTime.Now;
+//staff.Function = "test";
+//staff.Salary = 1000;
+//staff.FirstName = "test";
+//staff.EmailAdresse = "test@Test.com";
+//staff.LastName = "test";
 
-Traveller traveller = new Traveller();
+//Traveller traveller = new Traveller();
 
-traveller.HealthInfomation = "test";
-traveller.Nationality = "test";
-traveller.FirstName = "test1";
-staff.FirstName = "test1";
-staff.EmailAdresse = "test2@Test.com";
-staff.LastName = "test1";
+//traveller.HealthInfomation = "test";
+//traveller.Nationality = "test";
+//traveller.FirstName = "test1";
+//staff.FirstName = "test1";
+//staff.EmailAdresse = "test2@Test.com";
+//staff.LastName = "test1";
 
-staff.PassengerType();
-traveller.PassengerType();
+//staff.PassengerType();
+//traveller.PassengerType();
+
+ServiceFlight serviceFlight = new ServiceFlight();
 
 
+//foreach (DateTime dateTime in serviceFlight.GetFlightDates("Paris"))
+//{
+//    Console.WriteLine(dateTime);
+//}
+
+Console.WriteLine(serviceFlight.GetFlights("Departure", "Paris)").Count);
 
 
 

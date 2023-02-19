@@ -20,9 +20,20 @@ namespace AM.ApplicationCore.Domain
 
         public IList<Passenger> Passengers { get; set; }
 
-        public Flight()
+        
+
+        // constructor
+        public Flight( Plane plane, string departure, DateTime effictiveArrival, int estimatedDuration,
+            List<Passenger> passengers
+
+        )
         {
-            Passengers = new List<Passenger>();
+            
+            Plane = plane;
+            Departure = departure;
+            EffictiveArrival = effictiveArrival;
+            EstimatedDuration = estimatedDuration;
+            Passengers = passengers;
         }
 
         //ToString
@@ -30,5 +41,7 @@ namespace AM.ApplicationCore.Domain
         {
             return $"FlightId: {FlightId}, Plane: {Plane}, Departure: {Departure}, EffictiveArrival: {EffictiveArrival}, EstimatedDuration: {EstimatedDuration}";
         }
+
+
     }
 }
